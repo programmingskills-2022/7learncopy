@@ -1,0 +1,48 @@
+.card {
+  padding: 1rem;
+}
+
+.card,
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.header,
+.input {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form {
+  width: 100%;
+  gap: 1rem;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+.close {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-content: center;
+}
+
+.close svg {
+  font-size: larger;
+}
+
+.close svg:hover {
+  cursor: pointer;
+}

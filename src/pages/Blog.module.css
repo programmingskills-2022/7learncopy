@@ -1,0 +1,12 @@
+.blog {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title,
+.description {
+  color: var(--color-blue-1);
+}

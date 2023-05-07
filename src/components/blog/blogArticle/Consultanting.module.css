@@ -1,0 +1,77 @@
+.Consultanting {
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.Consultanting h3 {
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+}
+
+.level {
+  position: absolute;
+  top: 3.2rem;
+  width: 90%;
+  background-color: var(--color-gray-fff);
+  border: 1px solid var(--color-gray-500);
+  box-shadow: 1px 1px 5px 2px var(--color-gray-400);
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  z-index: 1;
+}
+.level li {
+  padding-right: 0.3rem;
+}
+
+.level li:hover {
+  background-color: var(--color-blue-1);
+  color: var(--color-gray-fff);
+  width: 100%;
+}
+
+.contact {
+  width: 80%;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.radios {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.radio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  font-weight: bold;
+}
+
+.radio input[type="radio"] {
+  width: 1rem;
+  height: 1rem;
+}
+
+.radio input[type="radio"]:hover {
+  cursor: pointer;
+  color: var(--color-gray-600);
+}
+
+.label {
+  font-weight: bold;
+}

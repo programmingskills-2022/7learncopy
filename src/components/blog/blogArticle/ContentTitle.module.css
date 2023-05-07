@@ -1,0 +1,33 @@
+.contentTitle {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 30%;
+}
+
+.title {
+  color: var(--color-blue-1);
+  font-size: large;
+  font-weight: bold;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
+
+.contentTitle .titles {
+  background-color: var(--color-gray-200);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+}
+
+.contentTitle .titles::before {
+  content: "* ";
+}
+
+@media only screen and (max-width: 992px) {
+  .contentTitle {
+    display: none;
+  }
+}

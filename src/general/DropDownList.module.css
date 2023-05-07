@@ -1,0 +1,21 @@
+.DropDownList {
+  position: relative;
+  color: #1d458a;
+  padding: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.DropDownList .title {
+  padding: 0;
+}
+
+.DropDownList svg {
+  color: #1d458a;
+  font-size: larger;
+}
+
+.svg {
+  border: none;
+}

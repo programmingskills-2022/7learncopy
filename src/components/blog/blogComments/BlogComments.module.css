@@ -1,0 +1,18 @@
+.comments {
+  width: 100%;
+  padding: 5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comments p {
+  padding: 0;
+}

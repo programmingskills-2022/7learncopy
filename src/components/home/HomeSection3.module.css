@@ -1,0 +1,136 @@
+.homeSection3 {
+  position: relative;
+  padding-top: 4rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  transition: 1s ease-in-out;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.title {
+  font-size: 2vw;
+  color: var(--color-gray-700);
+  font-weight: bolder;
+  z-index: 1;
+}
+
+.teacher {
+  padding-top: 5vh;
+}
+
+.shape {
+  position: absolute;
+  top: -50px;
+  left: -130px;
+  width: 38rem;
+  height: 50rem;
+  background-image: linear-gradient(var(--color-blue-1), var(--color-blue-3));
+  border-top-right-radius: 30rem;
+  border-bottom-right-radius: 30rem;
+  opacity: 0.4;
+}
+
+.figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.figure img {
+  margin-bottom: 2rem;
+  border-radius: 2rem;
+}
+
+p {
+  padding-bottom: 2rem;
+}
+
+.gray {
+  color: var(--color-gray-600);
+}
+
+.academy {
+  width: 70%;
+  line-height: 3rem;
+  text-align: center;
+  font-size: large;
+}
+
+.circle {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background-color: var(--color-gray-fff);
+  display: grid;
+  place-content: center;
+  animation: grow 2s infinite;
+  margin: 2rem;
+}
+.circle > span svg {
+  color: var(--color-blue-1);
+  font-size: 3rem;
+  animation: zoom 2s infinite;
+}
+
+.circle > span:hover {
+  cursor: pointer;
+}
+
+@keyframes grow {
+  0% {
+    box-shadow: 0px 0px 1em 1em var(--color-gray-fff);
+  }
+  30% {
+    box-shadow: 0px 0px 1em 3em var(--color-gray-fff);
+  }
+  60% {
+    box-shadow: 0px 0px 1em 6em var(--color-blue-3);
+  }
+  100% {
+    box-shadow: 0px 0px 1em 10em var(--color-blue-3);
+  }
+}
+
+@keyframes zoom {
+  from {
+    font-size: 3rem;
+  }
+
+  to {
+    font-size: 2rem;
+  }
+}
+
+.arrows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.box {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--color-gray-fff);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box svg {
+  color: var(--color-blue-1);
+  font-size: 0.75rem;
+}

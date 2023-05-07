@@ -1,0 +1,46 @@
+.articleContext {
+  width: 70%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.articleContext p {
+  line-height: 3;
+  text-align: justify;
+}
+
+.articleContext h1 {
+  padding-bottom: 1rem;
+}
+
+.articleContext h2 {
+  padding: 2rem 0 1rem 0;
+}
+
+.articleContext h3 {
+  padding: 3rem 0 2rem 0;
+}
+
+.ul {
+  padding: 0 3rem;
+  line-height: 3;
+}
+
+.readMore {
+  width: 100%;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media only screen and (max-width: 992px) {
+  .articleContext {
+    padding-top: 1rem;
+    width: 100%;
+  }
+}

@@ -1,0 +1,22 @@
+.coursesMenu {
+  position: absolute;
+  top: 90px;
+  left: 10%;
+  width: 80%;
+  border-radius: 1rem;
+  background-color: #fff;
+  color: #000;
+  padding: 10px;
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 20;
+}
+
+.courseColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}

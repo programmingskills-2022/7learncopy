@@ -1,0 +1,98 @@
+@font-face {
+  font-family: iransans;
+  src: url("./fonts/IRANSans\ Regular.ttf");
+}
+
+@font-face {
+  font-family: "B Yekan";
+  src: url("./fonts/BYEKAN.TTF") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: vazir;
+  font-style: normal;
+  font-weight: 100;
+  src: url("./fonts/Vazir-Regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: vazir;
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/Vazir-Regular.ttf") format("ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+input,
+textarea,
+label,
+button {
+  font: inherit;
+}
+
+img {
+  display: block;
+}
+html {
+  scroll-behavior: smooth;
+}
+#root,
+#overlay {
+  font-family: vazir, Tahoma, Geneva, sans-serif;
+  width: 100%;
+  display: flex;
+  background-color: var(--color-blue-3);
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  direction: rtl;
+  overflow-y: hidden;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+:root {
+  /* COLORS */
+
+  --color-gray-fff: #fff;
+  --color-gray-100: #f4f3f1;
+  --color-gray-200: #dddbd8;
+  --color-gray-300: #ccc9c6;
+  --color-gray-400: #aeaba7;
+  --color-gray-500: #8a8784;
+  --color-gray-600: #656360;
+  --color-gray-700: #4b4a47;
+  --color-gray-800: #31302e;
+  --color-gray-900: #1f1d1b;
+  --color-blue-hover: #3797ee;
+  --color-blue-0: #1f76c8;
+  --color-blue-1: #218bed;
+  --color-blue-2: #acd3f4;
+  --color-blue-3: #eef3f3;
+  --color-blue-3-1: hsla(180, 17%, 94%, 0.9);
+  --color-blue-4: #d9eeee;
+
+  --color-orange-100: #f2e2a8;
+  --color-orange-200: #fadc84;
+  --color-orange-300: #f9d156;
+  --color-orange-400: #f7c737;
+
+  /* LINE HEIGHT */
+  --lineheight-paragraph: 3vw;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.app {
+}

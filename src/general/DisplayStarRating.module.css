@@ -1,0 +1,16 @@
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.on span svg {
+  color: rgb(253, 212, 7);
+}
+.off span svg {
+  color: #ccc;
+}
+
+.star {
+  font-size: x-large;
+}

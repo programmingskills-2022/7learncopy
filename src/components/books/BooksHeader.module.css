@@ -1,0 +1,31 @@
+.booksHeader {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.title,
+.description {
+  color: var(--color-blue-1);
+}
+
+.title {
+  padding-top: 5rem;
+  font-size: 2.5vw;
+  font-weight: bolder;
+}
+
+.description {
+  font-size: 1.5vw;
+  text-align: center;
+  line-height: 8vh;
+}
+
+.figure {
+  width: 50vw;
+}
+
+.figure img {
+  width: 100%;
+}

@@ -1,0 +1,31 @@
+.card {
+  padding: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card p {
+  padding: 0;
+}
+
+.card span {
+  display: grid;
+  place-content: center;
+}
+
+.card svg {
+  font-size: larger;
+  color: var(--color-blue-1);
+}
+
+.readMore {
+  font-size: larger;
+  font-weight: bold;
+  color: var(--color-blue-1);
+}
+
+.title {
+  font-size: larger;
+}

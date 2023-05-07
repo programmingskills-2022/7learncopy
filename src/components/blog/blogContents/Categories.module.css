@@ -1,0 +1,12 @@
+.categories {
+  list-style-type: none;
+  color: var(--color-gray-500);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.categories li {
+  padding: 0.5rem 1rem;
+}

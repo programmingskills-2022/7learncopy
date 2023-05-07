@@ -1,0 +1,35 @@
+.chooseCategories {
+  width: 100%;
+  display: none;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.chooseCategories button {
+  width: 100%;
+  height: 10vh;
+  border: none;
+  background-color: var(--color-blue-4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.chooseCategories button svg {
+  font-size: larger;
+  color: var(--color-gray-500);
+}
+
+.chooseCategories button:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) {
+  .chooseCategories {
+    display: flex;
+  }
+}

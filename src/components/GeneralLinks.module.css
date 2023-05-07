@@ -1,0 +1,54 @@
+.generalLinks {
+  width: 17vw;
+  height: 17vw;
+  background-color: var(--color-gray-fff);
+  border-radius: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.generalLinks:hover {
+  cursor: pointer;
+  transform: translateY(-1rem);
+  transition-duration: 0.3s;
+}
+
+.generalLinks img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1rem;
+}
+
+.title {
+  padding: 0;
+  font-size: 2vw;
+  font-weight: bold;
+}
+
+.logo {
+  width: 4vw;
+  height: 4vw;
+  background-color: blue;
+  background-image: linear-gradient(
+    to top right,
+    var(--color-blue-1),
+    var(--color-gray-fff)
+  );
+  border-radius: 1rem;
+  display: grid;
+  place-content: center;
+}
+
+.logo svg {
+  font-size: x-large;
+  color: var(--color-gray-fff);
+}
+
+@media only screen and (max-width: 992px) {
+  .generalLinks:hover {
+    transform: none;
+  }
+}

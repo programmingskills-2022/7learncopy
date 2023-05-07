@@ -1,0 +1,104 @@
+.root {
+  background-color: var(--color-blue-3);
+}
+.main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.bell {
+  position: fixed;
+  bottom: 5rem;
+  right: 4rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  background-color: var(--color-blue-1);
+  font-size: x-large;
+  padding: 1rem;
+  z-index: 30;
+}
+
+.bellBox {
+  position: fixed;
+  bottom: 5.25rem;
+  right: 4.25rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  border: 2px solid var(--color-gray-fff);
+  background-color: var(--color-blue-1);
+  font-size: x-large;
+  padding: 1rem;
+  z-index: 31;
+  opacity: 0.4;
+}
+.bell svg {
+  color: var(--color-gray-fff);
+}
+
+.bell:hover {
+  cursor: pointer;
+  border: none;
+}
+
+.bell:hover svg {
+  font-size: 2.2rem;
+  transition-duration: 0.5s;
+}
+
+.bell:hover .bellBox {
+  display: none;
+}
+
+.bell:hover::before {
+  content: attr(data-tooltip);
+  position: fixed;
+  bottom: 5.6rem;
+  right: 8rem;
+  background-color: var(--color-gray-600);
+  color: var(--color-gray-fff);
+  font-size: 0.75rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  z-index: 31;
+}
+
+.footer {
+  margin-top: 10rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.jumpTop {
+  position: fixed;
+  bottom: 4rem;
+  left: 4rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--color-gray-fff);
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+
+.jumpTop svg {
+  font-size: xx-large;
+  color: var(--color-gray-400);
+}
+
+.jumpTop:hover svg {
+  color: var(--color-gray-900);
+}
+
+.hide {
+  opacity: 0;
+  left: -100%;
+}
+.show {
+  opacity: 1;
+}

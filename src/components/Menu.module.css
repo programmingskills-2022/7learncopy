@@ -1,0 +1,145 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  list-style-type: none;
+}
+
+.container li {
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.figure {
+  width: 40%;
+  padding: 0;
+}
+
+.img {
+  width: 100%;
+  display: block;
+}
+
+.img992 {
+  display: none;
+}
+
+.img992 p {
+  padding: 0;
+}
+
+a,
+.courses {
+  color: var(--color-gray-600);
+  font-size: 1.2vw;
+  font-weight: bold;
+  padding: 0.5em 1em;
+}
+
+a {
+  display: inline-block;
+  height: 100%;
+}
+
+a:hover,
+.courses:hover,
+.courses:hover svg {
+  color: var(--color-blue-hover);
+}
+
+svg {
+  position: relative;
+  top: 0.2rem;
+  color: var(--color-gray-600);
+}
+
+.courses {
+  border: none;
+}
+
+.courses svg {
+  margin-right: 0.5rem;
+}
+
+.courses:hover {
+  cursor: pointer;
+}
+.courses:hover svg {
+  transition: 0.2s ease-in-out;
+  transform: rotate(180deg) translateY(-1px);
+}
+.courses:hover div {
+  display: flex;
+}
+
+.search {
+  width: 3rem;
+  height: 3rem;
+  background-color: white;
+  border-radius: 1rem;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  display: grid;
+  place-content: center;
+}
+
+.search svg {
+  font-size: x-large;
+}
+
+.search:hover {
+  cursor: pointer;
+}
+.search:hover svg,
+.search:focus svg {
+  color: var(--color-gray-500);
+}
+
+.programmingAlphabet {
+  border: 1px solid var(--color-gray-600);
+  border-radius: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  color: var(--color-gray-600);
+}
+
+.programmingAlphabet svg {
+  margin-left: 1rem;
+}
+.programmingAlphabet:hover,
+.programmingAlphabet:focus,
+.programmingAlphabet:hover svg,
+.programmingAlphabet:focus svg {
+  background-color: var(--color-gray-600);
+  color: white;
+}
+
+@media only screen and (max-width: 992px) {
+  .menuItem {
+    display: none;
+  }
+  .figure {
+    display: none;
+  }
+  .img992 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+  }
+  .img992 p {
+    padding-right: 1vw;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--color-gray-500);
+  }
+  .img992 svg {
+    font-size: 5vw;
+  }
+  .img992:hover {
+    cursor: pointer;
+  }
+}

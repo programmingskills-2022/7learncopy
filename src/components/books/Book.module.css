@@ -1,0 +1,123 @@
+.book {
+  padding: 1rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: row;
+}
+
+.title {
+  font-size: 2vw;
+  color: var(--color-gray-700);
+  padding: 1rem 0;
+}
+
+.bookInfo {
+  padding: 0 2rem;
+}
+
+.description {
+  padding: 1rem 0;
+  width: 70%;
+  color: var(--color-gray-400);
+  line-height: var(--lineheight-paragraph);
+}
+
+.download {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.downloadInfoRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.downloadInfoRight p {
+  padding: 0;
+}
+
+.downloadInfoRight p {
+  color: var(--color-gray-700);
+}
+
+.downloadInfoRight .subject {
+  display: grid;
+  place-content: center;
+}
+
+.downloadInfoRight svg {
+  color: var(--color-blue-1);
+  font-size: larger;
+}
+
+.see {
+  color: var(--color-gray-700);
+  font-weight: bold;
+}
+
+.leftArrow {
+  width: 3vw;
+  height: 3vw;
+  border-radius: 50%;
+  border: 1px solid var(--color-blue-1);
+  display: grid;
+  place-content: center;
+}
+
+.downloadInfoLeft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.downloadInfoLeft p {
+  padding: 0;
+}
+
+.downloadInfoLeft:hover .see {
+  color: var(--color-blue-1);
+}
+
+.downloadInfoLeft:hover .leftArrow {
+  background-color: var(--color-blue-1);
+}
+
+.downloadInfoLeft:hover .leftArrow svg {
+  color: var(--color-gray-fff);
+}
+
+.leftArrow svg {
+  color: var(--color-blue-1);
+}
+
+@media only screen and (max-width: 992px) {
+  .downloadInfoLeft {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .book {
+    flex-direction: column;
+  }
+  .downloadInfoLeft {
+    display: none;
+  }
+  .description {
+    display: none;
+  }
+  .bookInfo {
+    width: 100%;
+  }
+  .title {
+    font-size: 4vw;
+  }
+}

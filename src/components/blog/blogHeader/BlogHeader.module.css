@@ -1,0 +1,107 @@
+.blogHeader {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.container {
+  width: 60vw;
+  height: 75vh;
+  position: relative;
+  background-image: url("./../../../images/whatIsProgramming.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10%;
+  overflow: hidden;
+}
+
+.container:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.hero {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  left: 0;
+  height: 70%;
+  background-image: linear-gradient(
+    to top,
+    hsla(0, 0%, 0%, 0.9),
+    hsla(0, 0%, 100%, 0.2)
+  );
+  padding-right: 1rem;
+  color: var(--color-gray-fff);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10%;
+  padding-top: 25%;
+}
+
+.articleInfo,
+.subject {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.articleInfo svg {
+  color: var(--color-gray-fff);
+}
+
+.articleInfo p {
+  padding: 0;
+}
+
+.articleInfo {
+  gap: 4rem;
+}
+
+.subject {
+  gap: 0.5rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    height: 70vh;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .blogHeader {
+    flex-direction: column;
+  }
+  .blogHeader .title {
+    padding-top: 1rem;
+    padding-right: 1rem;
+    color: var(--color-gray-800);
+  }
+  .container {
+    height: 70vh;
+    width: 90%;
+  }
+
+  .hero {
+    background-image: none;
+  }
+  .articleInfo p {
+    color: var(--color-gray-500);
+  }
+}

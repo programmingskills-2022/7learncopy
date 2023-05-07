@@ -1,0 +1,25 @@
+.whyItems {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--color-gray-fff);
+  border-radius: 1rem;
+  display: grid;
+  place-content: center;
+}
+
+.logo svg {
+  font-size: xx-large;
+  color: var(--color-blue-1);
+}
+
+.description {
+  padding: 0;
+  color: var(--color-gray-600);
+}

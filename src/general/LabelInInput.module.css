@@ -1,0 +1,25 @@
+.label {
+  padding-right: 1rem;
+}
+
+.input,
+.inputLable {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  padding-left: 0.25rem;
+}
+
+.inputLable {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.inputLable label {
+  width: 20%;
+}
+
+.input {
+  justify-content: flex-end;
+  align-items: flex-end;
+}

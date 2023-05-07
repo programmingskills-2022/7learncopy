@@ -1,0 +1,52 @@
+.container {
+  padding-top: 5rem;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.backHuman {
+  position: absolute;
+  top: -5rem;
+  left: 4rem;
+  width: 150%;
+  transform: scaleX(-1);
+  opacity: 0.1;
+}
+
+.figure {
+  width: 80%;
+}
+
+.figure img {
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 1200px) {
+  .backHuman {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .right {
+    display: none;
+  }
+  .content {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,14 @@
+.blogHeaderItems {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+@media only screen and (max-width: 992px) {
+  .blogHeaderItems {
+    gap: 2rem;
+  }
+}

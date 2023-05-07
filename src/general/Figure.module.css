@@ -1,0 +1,22 @@
+figure {
+  margin: 0;
+}
+.fig img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.boxShadow {
+  box-shadow: 1px 20px 10px -10px var(--color-gray-500);
+}
+
+@media only screen and (max-width: 1200px) {
+  figure {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  figure {
+    width: 100%;
+  }
+}

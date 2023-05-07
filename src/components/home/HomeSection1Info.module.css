@@ -1,0 +1,20 @@
+.HomeSection1Info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5vh;
+}
+
+.logo svg {
+  width: 2rem;
+  height: 2rem;
+  color: var(--color-blue-1);
+}
+
+.description {
+  text-align: center;
+  font-size: 1.3vw;
+  font-weight: bold;
+  color: var(--color-gray-800);
+}

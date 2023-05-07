@@ -1,0 +1,29 @@
+.blogHeaderItem {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 1rem;
+  color: var(--color-gray-800);
+}
+
+.blogHeaderItem:hover {
+  cursor: pointer;
+}
+
+.blogHeaderItem:hover h2 {
+  color: var(--color-blue-1);
+}
+
+.SubjectDate {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+  padding-top: 1rem;
+  color: var(--color-gray-500);
+}
+
+.SubjectDate p {
+  padding: 0;
+}

@@ -1,0 +1,23 @@
+.searchForm {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-top: 20vh;
+}
+
+.searchForm button {
+  width: 4vw;
+  height: 6vw;
+  border: none;
+  background-color: var(--color-gray-fff);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.searchForm button svg {
+  font-size: larger;
+  color: var(--color-gray-500);
+}
