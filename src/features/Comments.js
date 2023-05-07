@@ -9,7 +9,8 @@ const initialCommentState = {
   error: null,
 };
 
-const COMMENTS_URL = "http://localhost:3500/comments";
+const COMMENTS_URL = "https://sevenlearncopy.onrender.com/comments";
+//"http://localhost:3500/comments";
 
 export const fetchComments = createAsyncThunk(
   "comments/fetchComments",
