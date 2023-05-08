@@ -166,7 +166,7 @@ const SendComment = (props) => {
             <StarRating />
             <Button
               type="submit"
-              width="10vw"
+              width="100px"
               height="3vw"
               backgroundColor="#218bed"
               backgroundColorHover="#1f76c8"
