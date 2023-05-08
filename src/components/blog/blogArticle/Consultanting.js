@@ -100,8 +100,8 @@ const Consultanting = () => {
         </div>
         <Button
           type="submit"
-          width="80% "
-          height="4vw"
+          width="80%"
+          height="40px"
           color="white"
           label="ثبت درخواست"
           backgroundColor="#2a4159"
