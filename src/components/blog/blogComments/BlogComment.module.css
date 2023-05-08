@@ -77,3 +77,12 @@
   align-items: flex-start;
   flex-direction: column;
 }
+
+@media only screen and (max-width: 768px) {
+  .replySvg svg,
+  .editSvg svg,
+  .delSvg svg {
+    width: 15px;
+    height: 15px;
+  }
+}
