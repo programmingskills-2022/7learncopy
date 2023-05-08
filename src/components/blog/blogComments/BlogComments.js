@@ -1,3 +1,8 @@
+/*
+  this component is used for showing all comments
+  note : <BlogComment> is showing each comment
+*/
+
 import React, { useContext, useEffect } from "react";
 import Button from "../../../general/Button";
 import classes from "./BlogComments.module.css";
@@ -32,6 +37,7 @@ const BlogComments = (props) => {
   }, [commentsStatus, dispatch]);
 
   let content = "";
+
   if (commentsStatus === "loading") content = <p>Loading...</p>;
   else if (commentsStatus === "succeeded") {
     const orderedComments = comments

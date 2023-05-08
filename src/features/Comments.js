@@ -1,7 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { compareAsc, format, sub } from "date-fns";
 import axios from "axios";
-import { act } from "react-dom/test-utils";
 
 const initialCommentState = {
   comments: [],
@@ -9,7 +8,8 @@ const initialCommentState = {
   error: null,
 };
 
-const COMMENTS_URL = "https://sevenlearncopy.onrender.com/comments";
+const COMMENTS_URL = "http://localhost:3500/comments";
+//"https://sevenlearncopy.onrender.com/comments";
 //"http://localhost:3500/comments";
 
 export const fetchComments = createAsyncThunk(
@@ -29,6 +29,33 @@ export const addNewComment = createAsyncThunk(
   async (newComment) => {
     try {
       const response = await axios.post(COMMENTS_URL, newComment);
+      return response.data;
+    } catch (err) {
+      return err.message;
+    }
+  }
+);
+
+export const deleteComment = createAsyncThunk(
+  "comments/deleteComment",
+  async (comment) => {
+    const { id } = comment;
+    try {
+      const response = await axios.delete(`${COMMENTS_URL}/${id}`);
+      if (response?.status === 200) return comment;
+      return `${response?.status} : ${response?.statusText}`;
+    } catch (err) {
+      return err.message;
+    }
+  }
+);
+
+export const updateComment = createAsyncThunk(
+  "comments/updateComment",
+  async (editComment) => {
+    const { id } = editComment;
+    try {
+      const response = await axios.put(`${COMMENTS_URL}/${id}`, editComment);
       return response.data;
     } catch (err) {
       return err.message;
@@ -74,8 +101,34 @@ const commentsSlice = createSlice({
         state.error = action.error.message;
       })
       .addCase(addNewComment.fulfilled, (state, action) => {
+        if (!action.payload?.id) {
+          console.log("Post comment could not complete");
+          console.log(action.payload);
+          return;
+        }
         state.status = "succeeded";
         state.comments = [...state.comments, action.payload];
+      })
+      .addCase(deleteComment.fulfilled, (state, action) => {
+        if (!action.payload?.id) {
+          console.log("delete could not complete");
+          console.log(action.payload);
+          return;
+        }
+
+        const { id } = action.payload;
+        const comments = state.comments.filter((comment) => comment.id !== id);
+        state.comments = comments;
+      })
+      .addCase(updateComment.fulfilled, (state, action) => {
+        if (!action.payload?.id) {
+          console.log("update could not complete");
+          console.log(action.payload);
+          return;
+        }
+        const { id } = action.payload;
+        const comments = state.comments.filter((comment) => comment.id !== id);
+        state.comments = [...comments, action.payload];
       });
   },
 });
@@ -87,6 +140,9 @@ export const selectCommentsByArticleId = (state, articleId) =>
 
 export const selectCommentsByParentId = (state, parentId) =>
   state.comments.comments.filter((comment) => comment.parentId === parentId);
+
+export const selectCommentById = (state, commentId) =>
+  state.comments.comments.find((comment) => comment.id === commentId);
 
 export const selectAllComments = (state) => state.comments.comments;
 export const getCommentsStatus = (state) => state.comments.status;

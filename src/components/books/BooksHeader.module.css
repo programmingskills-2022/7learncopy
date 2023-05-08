@@ -12,20 +12,12 @@
 
 .title {
   padding-top: 5rem;
-  font-size: 2.5vw;
+  font-size: 1.5rem;
   font-weight: bolder;
 }
 
 .description {
-  font-size: 1.5vw;
+  font-size: 1rem;
   text-align: center;
   line-height: 8vh;
-}
-
-.figure {
-  width: 50vw;
-}
-
-.figure img {
-  width: 100%;
 }

@@ -1,4 +1,7 @@
-import React, { useContext, useState } from "react";
+/* 
+  this component is used for insert new comment or reply comment page
+*/
+import React, { useContext, useEffect, useState } from "react";
 import Modal from "../../../general/Modal";
 import Card from "../../../general/Card";
 import classes from "./SendComment.module.css";
@@ -10,24 +13,23 @@ import { StarRating } from "../../../general/StarRating";
 import { useSelector, useDispatch } from "react-redux";
 import {
   addNewComment,
-  commentsSliceActions,
-  fetchComments,
-  postComment,
   selectAllComments,
+  selectCommentById,
+  updateComment,
 } from "../../../features/Comments";
-import { format } from "date-fns";
 import { useNavigate, useParams } from "react-router-dom";
-import { useEffect } from "react";
 
 const SendComment = (props) => {
   const [addNewRequest, setAddNewRequest] = useState("idle");
   const ctx = useContext(GeneralContext);
   const comments = useSelector(selectAllComments);
+
+  const commentsSortById = comments.slice().sort((a, b) => a.id - b.id);
+
   const { articleId } = useParams();
 
   const rating = ctx.starRating;
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [description, setDescription] = useState("");
@@ -38,35 +40,75 @@ const SendComment = (props) => {
 
   const canSave =
     [name, email, description].every(Boolean) && addNewRequest === "idle";
+  const editedComment = useSelector((state) =>
+    selectCommentById(state, ctx.reply.parentId)
+  );
+
+  useEffect(() => {
+    // if comment must be updated?
+    if (!ctx.reply.isNew) {
+      setName(editedComment?.name);
+      setEmail(editedComment?.email);
+      setDescription(editedComment?.description);
+    }
+  }, []);
 
   const onSaveCommentClicked = (e) => {
     e.preventDefault();
-    const arId = Number(articleId);
+    if (ctx.reply.isNew) {
+      const arId = Number(articleId);
 
-    const id = comments.length > 0 ? comments[comments.length - 1].id + 1 : 1;
+      const id =
+        commentsSortById.length > 0
+          ? commentsSortById[commentsSortById.length - 1].id + 1
+          : 1;
 
-    const commentDate = new Date().toISOString();
+      const commentDate = new Date().toISOString();
 
-    if (canSave)
-      try {
-        setAddNewRequest("pending");
-        dispatch(
-          addNewComment({
-            parentId: ctx.reply.isReply ? ctx.reply.parentId : 0,
-            id,
-            articleId: arId,
-            name,
-            email,
-            description,
-            rate: rating,
-            date: commentDate,
-          })
-        ).unwrap();
-      } catch (err) {
-        console.error("fail to save the comment", err);
-      } finally {
-        setAddNewRequest("idle");
-      }
+      const newComment = {
+        parentId: ctx.reply.isReply ? ctx.reply.parentId : 0,
+        id,
+        articleId: arId,
+        name,
+        email,
+        description,
+        rate: rating,
+        date: commentDate,
+      };
+
+      if (canSave)
+        try {
+          setAddNewRequest("pending");
+          dispatch(addNewComment(newComment)).unwrap();
+        } catch (err) {
+          console.error("fail to save the comment", err);
+        } finally {
+          setAddNewRequest("idle");
+        }
+    } else {
+      const arId = Number(articleId);
+      const commentDate = new Date().toISOString();
+
+      const editedComment = {
+        parentId: 0,
+        id: ctx.reply.parentId,
+        articleId: arId,
+        name,
+        email,
+        description,
+        rate: rating,
+        date: commentDate,
+      };
+      if (canSave)
+        try {
+          setAddNewRequest("pending");
+          dispatch(updateComment(editedComment)).unwrap();
+        } catch (err) {
+          console.error("fail to update the comment", err);
+        } finally {
+          setAddNewRequest("idle");
+        }
+    }
     ctx.onCommentHide();
   };
 
@@ -75,8 +117,9 @@ const SendComment = (props) => {
       <Card className={classes.card}>
         <div className={classes.header}>
           <h2>
-            ارسال دیدگاه<span>&nbsp;</span>
-            {ctx.reply?.isReply ? `در پاسخ به` : `جدید`}
+            {!ctx.reply.isNew ? `ویرایش ` : `ارسال `}
+            دیدگاه<span>&nbsp;</span>
+            {ctx.reply.isNew && (ctx.reply?.isReply ? `در پاسخ به` : `جدید`)}
           </h2>
           <span className={classes.close} onClick={ctx.onCommentHide}>
             <FaTimes />

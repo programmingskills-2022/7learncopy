@@ -21,7 +21,7 @@
 
 .shape {
   position: absolute;
-  width: 85rem;
+  width: 10vw;
   height: 30rem;
   top: 10rem;
   right: -10rem;
@@ -32,7 +32,7 @@
 }
 
 .title2 {
-  font-size: 2vw;
+  font-size: 1.5rem;
   color: var(--color-gray-700);
   font-weight: bolder;
   z-index: 1;

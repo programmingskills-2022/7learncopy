@@ -18,7 +18,7 @@
 }
 
 .title {
-  font-size: 2vw;
+  font-size: 1.5rem;
   color: var(--color-gray-700);
   font-weight: bolder;
   z-index: 1;
@@ -31,8 +31,8 @@
 .shape {
   position: absolute;
   top: -50px;
-  left: -130px;
-  width: 38rem;
+  left: -50px;
+  width: 30rem;
   height: 50rem;
   background-image: linear-gradient(var(--color-blue-1), var(--color-blue-3));
   border-top-right-radius: 30rem;

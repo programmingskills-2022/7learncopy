@@ -18,6 +18,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
 }
 
 .userCircle {
@@ -37,7 +38,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .reply p {
@@ -45,11 +46,34 @@
   color: var(--color-gray-500);
 }
 
-.replySvg {
+.replySvg,
+.editSvg,
+.delSvg {
   padding-inline-start: 1rem;
+}
+.replySvg svg,
+.editSvg svg,
+.delSvg svg {
+  width: 20px;
+  height: 20px;
+}
+
+.editSvg svg {
+  color: var(--color-blue-1);
+}
+
+.delSvg svg {
+  color: rgba(255, 0, 0, 0.652);
 }
 
 .comment {
   color: var(--color-gray-600);
   margin-bottom: 2rem;
+}
+
+.replyOperations {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
 }

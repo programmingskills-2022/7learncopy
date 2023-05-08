@@ -15,7 +15,7 @@ const GeneralContext = createContext({
   commentShow: false,
   starRating: 0,
   help: false,
-  reply: { isReply: false, parentId: 0 },
+  reply: { isReply: false, parentId: 0, isNew: true },
   onShowMenu: () => {},
   onHideMenu: () => {},
   onToggleCategories: () => {},
@@ -64,18 +64,28 @@ export const GeneralContextProvider = (props) => {
     setHelp((prev) => handler);
   };
 
-  const commentShowHandle = () => {
+  /*this code is for insert and update comment/reply comment */
+
+  const commentShowHandle = (isNew) => {
     setCommentShow(true);
-    setReply({ isReply: false, parentId: 0 });
+    setReply({ isReply: false, parentId: 0, isNew });
+  };
+
+  /*this code is for insert and update comment/reply comment */
+
+  const SetIsReplyHandle = (parentId, isNew) => {
+    setCommentShow(true);
+    if (!isNew)
+      setReply({
+        isReply: false,
+        parentId,
+        isNew,
+      }); //if this comment must be editted?
+    else setReply({ isReply: true, parentId, isNew }); // this comment is a reply comment
   };
 
   const commentHideHandle = () => {
     setCommentShow(false);
-  };
-
-  const SetIsReplyHandle = (parentId) => {
-    setCommentShow(true);
-    setReply({ isReply: true, parentId });
   };
 
   const setStarRatingHandle = (rate) => {

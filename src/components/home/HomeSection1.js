@@ -28,8 +28,8 @@ const HomeSection1 = (props) => {
         <div className={classes.buttons}>
           <Button
             type="button"
-            width="20vw"
-            height="6vw"
+            width="200px"
+            height="50px"
             backgroundColor="#007bec"
             backgroundColorHover="#0060ba"
             color="white"
@@ -37,8 +37,8 @@ const HomeSection1 = (props) => {
           />
           <Button
             type="button"
-            width="13vw"
-            height="6vw"
+            width="150px"
+            height="50px"
             backgroundColor="#1d2d3d"
             backgroundColorHover="#25394d"
             color="white"

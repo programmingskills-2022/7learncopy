@@ -27,142 +27,82 @@
     {
       "parentId": 0,
       "id": 1,
-      "articleId": 2,
-      "name": "hjhjhj",
-      "email": "hjhjhj",
-      "description": "hjhj",
-      "rate": 4,
-      "date": "2023-05-03T20:14:36.893Z"
-    },
-    {
-      "parentId": 0,
-      "id": 2,
-      "articleId": 2,
-      "name": "shghg",
-      "email": "ghghgh",
-      "description": "ghghghgh",
-      "rate": 2,
-      "date": "2023-05-03T20:41:02.845Z"
-    },
-    {
-      "parentId": 0,
-      "id": 3,
-      "articleId": 1,
-      "name": "tarane",
-      "email": "taraneh@gmail.com",
-      "description": "it's a very useful article ",
-      "rate": 5,
-      "date": "2023-05-03T21:18:43.656Z"
-    },
-    {
-      "parentId": 0,
-      "id": 4,
       "articleId": 1,
       "name": "mahdi",
       "email": "mahdi@gmail.com",
       "description": "مقاله تون رو مطالعه کردم خیلی عالی بود ، متشکرم از تیم تحریریه سون لرن.من میخواستم از سنین کودکی فرزندم رو با برنامه نویسی آشنا کنم ولی خب نمیدونم که علاقه داره یا نه ، خواستم ازتون راهنمایی بگیرم که چطور میتونم بفهمم که علاقه به برنامه نویسی داره یا نه؟",
-      "rate": 3,
-      "date": "2023-05-03T21:20:05.183Z"
-    },
-    {
-      "parentId": 4,
-      "id": 5,
-      "articleId": 1,
-      "name": "نازنین کریمی مقدم",
-      "email": "nazanin@gmail.com",
-      "description": "درود خوشحالیم که مقاله براتون مفید بوده. معمولا افرادی که به پازل علاقه مند هستند برنامه نویسی رو هم دوست خواهند داشت اما در کل در کودکی یکم این تشخیص سخت هست چون کودک یک روحیه تنوع طلبی قوی رو در خودش داره و از اون سمت خودش هم دقیق نمیدونه که دقیقا چه چیزی رو دوست داره تا شخصیتش شکل بگیره. بهترین کار اینه که کار با اسکرچ رو شروع کنه. اسکرچ یچیزی بین برنامه نویسی و پازله، کار باهاش خیلی ساده هست و هیچ پیش زمینه ای هم نمیخواد. اگر با اسکرچ ارتباط خوبی برقرار کرد یعنی برنامه نویسی رو هم دوست خواهد داشت.",
-      "rate": 3,
-      "date": "2023-05-03T22:20:05.183Z"
-    },
-    {
-      "parentId": 4,
-      "id": 6,
-      "articleId": 1,
-      "name": "dhsghdsgh",
-      "email": "ghdgfhdg",
-      "description": "sdsdsdsdsd",
-      "rate": 3,
-      "date": "2023-05-04T07:34:04.241Z"
-    },
-    {
-      "parentId": 0,
-      "id": 7,
-      "articleId": 1,
-      "name": "sjdksjd",
-      "email": "jkdjkdjsk",
-      "description": "jkjdkfjdkf",
-      "rate": 4,
-      "date": "2023-05-04T07:35:48.682Z"
-    },
-    {
-      "parentId": 4,
-      "id": 8,
-      "articleId": 1,
-      "name": "sdshdgh",
-      "email": "ghghfgh",
-      "description": "ghfdgfhd",
-      "rate": 1,
-      "date": "2023-05-04T07:40:43.034Z"
-    },
-    {
-      "parentId": 4,
-      "id": 9,
-      "articleId": 1,
-      "name": "taraneh",
-      "email": "taraneh@gmail.com",
-      "description": "ممنون ازینکه نظر خود را ثبت می کنید",
       "rate": 5,
-      "date": "2023-05-04T07:49:43.320Z"
+      "date": "2023-05-08T15:16:38.726Z"
     },
     {
       "parentId": 1,
-      "id": 10,
+      "id": 2,
+      "articleId": 1,
+      "name": "taraneh",
+      "email": "taraneh@gmail.com",
+      "description": "درود خوشحالیم که مقاله براتون مفید بوده. معمولا افرادی که به پازل علاقه مند هستند برنامه نویسی رو هم دوست خواهند داشت اما در کل در کودکی یکم این تشخیص سخت هست چون کودک یک روحیه تنوع طلبی قوی رو در خودش داره و از اون سمت خودش هم دقیق نمیدونه که دقیقا چه چیزی رو دوست داره تا شخصیتش شکل بگیره. بهترین کار اینه که کار با اسکرچ رو شروع کنه. اسکرچ یچیزی بین برنامه نویسی و پازله، کار باهاش خیلی ساده هست و هیچ پیش زمینه ای هم نمیخواد. اگر با اسکرچ ارتباط خوبی برقرار کرد یعنی برنامه نویسی رو هم دوست خواهد داشت.",
+      "rate": 5,
+      "date": "2023-05-08T08:15:16.807Z"
+    },
+    {
+      "parentId": 0,
+      "id": 3,
+      "articleId": 2,
+      "name": "bahar",
+      "email": "bahar@gmail.com",
+      "description": "مقاله بسیار مفیدی است.",
+      "rate": 5,
+      "date": "2023-05-08T08:20:49.194Z"
+    },
+    {
+      "parentId": 3,
+      "id": 4,
       "articleId": 2,
       "name": "taraneh",
       "email": "taraneh@gmail.com",
-      "description": "ممنون ازینکه نظر خود را ثبت می کنید",
-      "rate": 3,
-      "date": "2023-05-04T07:54:02.314Z"
+      "description": "ممنون از ثبت نظرتون",
+      "rate": 5,
+      "date": "2023-05-08T08:21:26.306Z"
     },
     {
       "parentId": 0,
-      "id": 11,
+      "id": 5,
       "articleId": 1,
-      "name": "jhfdhfjdh",
-      "email": "fhjhjfhgjfhj",
-      "description": "hjhfjghfj",
-      "rate": 4,
-      "date": "2023-05-04T17:07:29.465Z"
+      "name": "negar",
+      "email": "negar@gmail.com",
+      "description": "یک نظر",
+      "rate": 3,
+      "date": "2023-05-08T15:39:03.723Z"
     },
     {
-      "parentId": 11,
-      "id": 12,
+      "parentId": 5,
+      "id": 6,
+      "articleId": 1,
+      "name": "taraneh",
+      "email": "taraneh@gmail.com",
+      "description": "ممنون از شما",
+      "rate": 5,
+      "date": "2023-05-08T15:39:34.992Z"
+    },
+    {
+      "parentId": 5,
+      "id": 7,
+      "articleId": 1,
+      "name": "bahar",
+      "email": "bahar@gmail.com",
+      "description": "ممنون",
+      "rate": 5,
+      "date": "2023-05-08T15:45:56.052Z"
+    },
+    {
+      "parentId": 0,
+      "id": 8,
       "articleId": 1,
       "name": "mahdi",
       "email": "mahdi@gmail.com",
-      "description": "dhfhdgfhgh",
+      "description": "نظر جدید است",
       "rate": 1,
-      "date": "2023-05-04T17:07:51.623Z"
-    },
-    {
-      "parentId": 0,
-      "id": 13,
-      "articleId": 2,
-      "name": "mahdi",
-      "email": "mahdi",
-      "description": "hjhjhjhjhjhj",
-      "rate": 4,
-      "date": "2023-05-04T18:08:37.479Z"
-    },
-    {
-      "parentId": 13,
-      "id": 14,
-      "articleId": 2,
-      "name": "ghghg",
-      "email": "fhhf",
-      "description": "hfhfh",
-      "rate": 0,
-      "date": "2023-05-04T18:08:49.550Z"
+      "date": "2023-05-08T15:46:58.028Z"
     }
   ]
 }

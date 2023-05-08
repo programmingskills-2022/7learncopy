@@ -18,7 +18,7 @@ const HomeSection5 = (props) => {
           <GeneralLinks title="سوالات متداول" logo={<FaMicrophone />} />
         </div>
       </div>
-      <div className={classes.shape}></div>
+      {/* <div className={classes.shape}></div> */}
     </div>
   );
 };

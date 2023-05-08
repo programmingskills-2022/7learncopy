@@ -1,19 +1,24 @@
 import Card from "../../../general/Card";
-import { FaUserCircle, FaReply } from "react-icons/fa";
+import { FaUserCircle, FaReply, FaTrash } from "react-icons/fa";
+import { AiFillEdit } from "react-icons/ai";
 import ReplyComment from "./ReplyComment";
 import { DisplayStarRating } from "../../../general/DisplayStarRating";
 import classes from "./BlogComment.module.css";
 import TimeAgo from "../../../general/TimeAgo";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import GeneralContext from "../../../store/GeneralContext";
-import { useSelector } from "react-redux";
-import { selectCommentsByParentId } from "../../../features/Comments";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  deleteComment,
+  selectCommentsByParentId,
+} from "../../../features/Comments";
 
 const BlogComment = (props) => {
   const ctx = useContext(GeneralContext);
+  const [deleteRequest, setDeleteRequest] = useState("idle");
 
-  const setReplyHandle = () => {
-    ctx.onSetIsReply(props.comment.id);
+  const setReplyHandle = (isNew) => {
+    ctx.onSetIsReply(props.comment.id, isNew);
   };
 
   const replyComments = useSelector((state) =>
@@ -24,6 +29,28 @@ const BlogComment = (props) => {
     .slice()
     .sort((a, b) => b.date.localeCompare(a.date));
 
+  const dispatch = useDispatch();
+
+  const deleteCommentHandle = () => {
+    try {
+      setDeleteRequest("pending");
+      if (
+        window.confirm(
+          "آیا مطمئنید که نظر انتخاب شده با همه ی پاسخ های آن حذف شود؟"
+        )
+      ) {
+        replyComments.forEach((replyComment) => {
+          dispatch(deleteComment({ id: replyComment.id })).unwrap();
+        });
+        dispatch(deleteComment({ id: props.comment.id })).unwrap();
+      }
+    } catch (err) {
+      console.error("failed to delete the comment", err);
+    } finally {
+      setDeleteRequest("idle");
+    }
+  };
+
   return (
     <Card className={classes.card} width="100%" backgroundColor="#fff">
       <div className={classes.commentHeader}>
@@ -31,10 +58,27 @@ const BlogComment = (props) => {
           <span className={classes.userCircle}>
             <FaUserCircle />
           </span>
-          <div className={classes.reply}>
-            <button className={classes.replySvg} onClick={setReplyHandle}>
-              <FaReply />
-            </button>
+          <div className={classes.replyOperations}>
+            <div className={classes.reply}>
+              <button
+                className={classes.replySvg}
+                onClick={(e) => setReplyHandle(true)}
+              >
+                <FaReply />
+              </button>
+
+              <button
+                className={classes.editSvg}
+                onClick={(e) => setReplyHandle(false)}
+              >
+                <AiFillEdit />
+              </button>
+
+              <button className={classes.delSvg} onClick={deleteCommentHandle}>
+                <FaTrash />
+              </button>
+            </div>
+
             <p>
               <TimeAgo timestamp={props.comment.date} />
             </p>
@@ -51,14 +95,6 @@ const BlogComment = (props) => {
           comment={replyComment.description}
         />
       ))}
-      {/* <ReplyComment
-        date="10 اردیبهشت 1402"
-        author="نازنین کریمی مقدم"
-        comment="درود
-خوشحالیم که مقاله براتون مفید بوده.
-معمولا افرادی که به پازل علاقه مند هستند برنامه نویسی رو هم دوست خواهند داشت اما در کل در کودکی یکم این تشخیص سخت هست چون کودک یک روحیه تنوع طلبی قوی رو در خودش داره و از اون سمت خودش هم دقیق نمیدونه که دقیقا چه چیزی رو دوست داره تا شخصیتش شکل بگیره.
-بهترین کار اینه که کار با اسکرچ رو شروع کنه. اسکرچ یچیزی بین برنامه نویسی و پازله، کار باهاش خیلی ساده هست و هیچ پیش زمینه ای هم نمیخواد. اگر با اسکرچ ارتباط خوبی برقرار کرد یعنی برنامه نویسی رو هم دوست خواهد داشت."
-      /> */}
     </Card>
   );
 };
