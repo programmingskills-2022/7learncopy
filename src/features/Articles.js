@@ -2,7 +2,8 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { format } from "date-fns";
 import axios from "axios";
 
-const ARTICLES_URL = "http://localhost:3500/articles";
+const ARTICLES_URL = "https://sevenlearncopy.onrender.com/articles";
+
 //"https://sevenlearncopy.onrender.com/articles";
 //"http://localhost:3500/articles";
 
