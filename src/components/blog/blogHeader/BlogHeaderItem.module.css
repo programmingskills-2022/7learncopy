@@ -27,3 +27,14 @@
 .SubjectDate p {
   padding: 0;
 }
+
+@media only screen and (max-width: 992px) {
+  .blogHeaderItem {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .blogHeaderItem h2 {
+    font-size: medium;
+  }
+}

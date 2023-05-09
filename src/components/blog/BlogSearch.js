@@ -13,7 +13,7 @@ const BlogSearch = () => {
         type="text"
         placeholder="جستجو در وبلاگ سون لرن ..."
         width="100%"
-        height="6vw"
+        height="max(6vw,50px)"
         padding="0 1rem"
       />
     </div>

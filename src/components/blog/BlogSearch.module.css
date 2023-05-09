@@ -10,7 +10,7 @@
 
 .searchForm button {
   width: 4vw;
-  height: 6vw;
+  height: max(6vw, 50px);
   border: none;
   background-color: var(--color-gray-fff);
   display: flex;
@@ -20,4 +20,10 @@
 .searchForm button svg {
   font-size: larger;
   color: var(--color-gray-500);
+}
+
+@media only screen and (max-width: 992px) {
+  .searchForm {
+    margin-top: 2rem;
+  }
 }

@@ -125,14 +125,36 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .menu li a {
+    padding: 0.2rem 0.5rem;
+  }
   .menu li a,
   .goal,
   .support,
   .support a {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
+  }
+  .address {
+    font-size: 0.5rem;
+    padding-top: 1rem;
   }
   .licenseBox {
     width: 120px;
     height: 120px;
+  }
+  .info2 p {
+    font-size: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .menu li a {
+    padding: 0.2rem 0.5rem;
+  }
+  .menu li a,
+  .goal,
+  .support,
+  .support a {
+    font-size: 0.5rem;
   }
 }

@@ -22,7 +22,7 @@ const HomeSection3 = (props) => {
           را به دست آوردم
         </p>
       </div>
-      <div className={classes.shape}></div>
+      {/* <div className={classes.shape}></div> */}
       <div class={classes.circle}>
         <span>
           <BsFillPlayFill />

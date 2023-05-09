@@ -91,18 +91,39 @@
   .blogHeader .title {
     padding-top: 1rem;
     padding-right: 1rem;
+    font-size: 1rem;
     color: var(--color-gray-800);
   }
   .container {
-    height: 70vh;
+    height: 50vh;
     width: 90%;
     background-size: contain;
   }
 
   .hero {
     background-image: none;
+    display: none;
+  }
+
+  .title {
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+
+  .articleInfo,
+  .subject {
+    justify-content: center;
+    align-items: center;
   }
   .articleInfo p {
     color: var(--color-gray-500);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    height: 30vh;
+    width: 90%;
+    background-size: contain;
   }
 }

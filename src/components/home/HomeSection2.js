@@ -65,7 +65,7 @@ const HomeSection2 = (props) => {
           color="white"
           label="همه دوره های سون لرن"
         />
-        <div className={classes.shape}></div>
+        {/* <div className={classes.shape}></div> */}
       </div>
     </div>
   );

@@ -82,7 +82,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  gap: 3vw;
+  gap: 1rem;
   padding-bottom: 2rem;
 }
 
@@ -112,7 +112,7 @@
 
 @media only screen and (max-width: 992px) {
   .infoContext {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   .homeSection1Images {
     display: none;
@@ -121,6 +121,10 @@
     width: 100%;
   }
   .title {
-    margin-top: 4rem;
+    margin-top: 3rem;
+    font-size: 2rem;
+  }
+  .infos {
+    gap: 2rem;
   }
 }
