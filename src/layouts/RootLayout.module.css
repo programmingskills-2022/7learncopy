@@ -110,4 +110,8 @@
   .bell {
     display: none;
   }
+  .footer {
+    margin-top: 2rem;
+    width: 90%;
+  }
 }

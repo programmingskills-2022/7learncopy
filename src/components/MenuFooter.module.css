@@ -148,6 +148,9 @@
 }
 
 @media only screen and (max-width: 550px) {
+  .menu {
+    padding-top: 5rem;
+  }
   .menu li a {
     padding: 0.2rem 0.5rem;
   }
@@ -155,6 +158,6 @@
   .goal,
   .support,
   .support a {
-    font-size: 0.5rem;
+    font-size: 0.8rem;
   }
 }
