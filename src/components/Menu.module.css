@@ -6,19 +6,29 @@
   list-style-type: none;
 }
 
+.logo {
+  width: 20%;
+  padding: 0;
+}
+
 .container li {
   cursor: pointer;
   overflow: hidden;
 }
 
 .figure {
-  width: 40%;
+  width: 80%;
   padding: 0;
 }
 
 .img {
-  width: 100%;
+  width: 50px;
+  height: 50px;
   display: block;
+}
+
+.img svg {
+  width: 100%;
 }
 
 .img992 {
@@ -137,7 +147,7 @@ svg {
     color: var(--color-gray-500);
   }
   .img992 svg {
-    font-size: 5vw;
+    font-size: 10vw;
   }
   .img992:hover {
     cursor: pointer;

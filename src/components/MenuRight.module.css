@@ -54,6 +54,9 @@ a {
   overflow: hidden;
   border-bottom: 1px solid var(--color-gray-200);
 }
+.container .otherLi a {
+  font-size: 0.7rem;
+}
 .container .coursesTitle {
   color: var(--color-gray-600);
   font-size: 1rem;

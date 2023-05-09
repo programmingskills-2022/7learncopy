@@ -22,7 +22,7 @@
 }
 
 .figure {
-  width: 5rem;
+  width: 3rem;
   margin: 0;
 }
 
@@ -164,6 +164,6 @@
   .goal,
   .support,
   .support a {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 }

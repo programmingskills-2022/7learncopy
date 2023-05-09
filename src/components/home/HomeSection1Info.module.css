@@ -3,7 +3,7 @@
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  gap: 1.5vh;
+  gap: 1rem;
 }
 
 .logo svg {

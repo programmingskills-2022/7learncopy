@@ -15,7 +15,7 @@ const Menu = () => {
   return (
     <>
       <ul className={classes.container}>
-        <li>
+        <li className={classes.logo}>
           <figure className={classes.figure}>
             <Link to="/">
               <img className={classes.img} src={logo} alt="logo" />

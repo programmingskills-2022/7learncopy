@@ -21,4 +21,7 @@
   .comments {
     padding: 0;
   }
+  .header p {
+    font-size: 0.6rem;
+  }
 }
