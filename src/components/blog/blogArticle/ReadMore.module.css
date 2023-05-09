@@ -29,3 +29,13 @@
 .title {
   font-size: larger;
 }
+
+@media only screen and (max-width: 768px) {
+  .title,
+  .readMore {
+    font-size: medium;
+  }
+  .card {
+    padding: 1rem;
+  }
+}

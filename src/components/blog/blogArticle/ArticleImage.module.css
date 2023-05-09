@@ -52,3 +52,16 @@
     height: 60vh;
   }
 }
+@media only screen and (max-width: 992px) {
+  .container {
+    width: 80vw;
+    height: 60vh;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 80vw;
+    height: 40vh;
+  }
+}

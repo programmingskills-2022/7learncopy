@@ -16,3 +16,9 @@
 .comments p {
   padding: 0;
 }
+
+@media only screen and (max-width: 992px) {
+  .comments {
+    padding: 0;
+  }
+}

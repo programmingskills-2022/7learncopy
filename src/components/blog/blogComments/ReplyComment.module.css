@@ -40,6 +40,12 @@
 
 .reply .author {
   color: var(--color-gray-800);
-  font-size: 1.25vw;
+  font-size: 1rem;
   font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+  .reply .author {
+    font-size: 0.7rem;
+  }
 }

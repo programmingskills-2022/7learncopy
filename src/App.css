@@ -45,7 +45,7 @@ html {
 }
 #root,
 #overlay {
-  font-family: vazir, Tahoma, Geneva, sans-serif;
+  font-family: Vazirmatn, Tahoma, Geneva, sans-serif;
   max-width: 100vw;
   width: 100%;
   display: flex;
