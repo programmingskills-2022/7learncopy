@@ -86,3 +86,10 @@
     height: 15px;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .card {
+    margin-top: 1rem;
+    padding: 1rem 1rem;
+  }
+}

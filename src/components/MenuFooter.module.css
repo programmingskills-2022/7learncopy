@@ -22,8 +22,10 @@
 }
 
 .figure {
-  width: 3rem;
+  width: 4rem;
   margin: 0;
+  display: grid;
+  place-content: center;
 }
 
 .img {
@@ -150,6 +152,9 @@
     justify-content: flex-start;
     align-items: flex-start;
     gap: 0;
+  }
+  .figure {
+    width: 2.5rem;
   }
 }
 

@@ -13,7 +13,7 @@ const Menu = () => {
   const ctx = useContext(GeneralContext);
 
   return (
-    <>
+    <div className={classes.topContainer}>
       <ul className={classes.container}>
         <li className={classes.logo}>
           <figure className={classes.figure}>
@@ -23,7 +23,6 @@ const Menu = () => {
           </figure>
           <button className={classes.img992} onClick={ctx.onShowMenu}>
             <BiMenu />
-            <p>سون لرن</p>
           </button>
         </li>
         <li className={classes.menuItem}>
@@ -48,14 +47,14 @@ const Menu = () => {
           </Link>
         </li>
       </ul>
-      <div className={`${classes.container}`}>
+      <div className={`${classes.container2}`}>
         <button className={classes.search}>
           <FaSearch />
         </button>
         <Login />
       </div>
       {ctx.showMenu && <MenuRight />}
-    </>
+    </div>
   );
 };
 

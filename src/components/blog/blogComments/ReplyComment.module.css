@@ -45,6 +45,9 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .card {
+    padding: 1rem 1rem;
+  }
   .reply .author {
     font-size: 0.7rem;
   }

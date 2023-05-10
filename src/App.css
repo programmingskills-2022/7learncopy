@@ -1,3 +1,4 @@
+/* @import url("https://v1.fontapi.ir/css/VazirFD"); */
 @font-face {
   font-family: iransans;
   src: url("./fonts/IRANSans\ Regular.ttf");
@@ -45,7 +46,7 @@ html {
 }
 #root,
 #overlay {
-  font-family: Vazirmatn, Tahoma, Geneva, sans-serif;
+  font-family: B Yekan, iransans, Vazirmatn, Tahoma, Geneva, sans-serif;
   max-width: 100vw;
   width: 100%;
   display: flex;

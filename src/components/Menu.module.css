@@ -1,9 +1,22 @@
-.container {
+.topContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.container,
+.container2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
   list-style-type: none;
+}
+
+.container {
+  width: 80%;
 }
 
 .logo {
@@ -22,8 +35,8 @@
 }
 
 .img {
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
   display: block;
 }
 
@@ -42,7 +55,7 @@
 a,
 .courses {
   color: var(--color-gray-600);
-  font-size: 1.2vw;
+  font-size: 1rem;
   font-weight: bold;
   padding: 0.5em 1em;
 }
@@ -127,6 +140,10 @@ svg {
 }
 
 @media only screen and (max-width: 992px) {
+  .container {
+    width: 100%;
+  }
+
   .menuItem {
     display: none;
   }
@@ -147,9 +164,16 @@ svg {
     color: var(--color-gray-500);
   }
   .img992 svg {
-    font-size: 10vw;
+    font-size: 3rem;
   }
   .img992:hover {
     cursor: pointer;
   }
 }
+
+/* @media only screen and (max-width: 768px) {
+  .img {
+    width: 50px;
+    height: 50px;
+  }
+} */

@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 
 const BlogArticle = (props) => {
   const body = `${props.body.slice(0, 100)}...`;
+  var jalaliDate = new Date(props.date).toLocaleDateString("fa-IR");
 
   return (
     <>
@@ -31,7 +32,7 @@ const BlogArticle = (props) => {
                   <p>{props.category}</p>
                 </div>
                 <div>
-                  <p className={classes.dat}>{props.date}</p>
+                  <p className={classes.dat}>{jalaliDate}</p>
                 </div>
               </div>
               <div className={classes.downloadInfoLeft}>

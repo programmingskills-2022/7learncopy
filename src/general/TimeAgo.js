@@ -17,9 +17,9 @@ const TimeAgo = ({ timestamp }) => {
   let newdate = "";
   let time = "";
   if (timestamp) {
-    //newdate = format(timestamp, "yyyy/MM/dd");
     const date = parseISO(timestamp);
-    newdate = format(date, "yyyy/MM/dd");
+    var newDate = format(date, "yyyy-MM-dd");
+    var jalaliDate = new Date(newDate).toLocaleDateString("fa-IR");
     time = formatAMPM(date);
     const timePeriod = formatDistanceToNow(date);
     timeAgo = `${timePeriod} ago`;
@@ -28,7 +28,7 @@ const TimeAgo = ({ timestamp }) => {
   return (
     <span>
       <i className={classes.date}>
-        {newdate} - {time}
+        {jalaliDate} - {time}
       </i>
     </span>
   );
